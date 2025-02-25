@@ -84,7 +84,7 @@ root.geometry("400x450")
 root.resizable(False, False)
 
 # Your OpenWeatherMap API Key
-api_key = "d34c1570fd8dbe1d8dc43078aad2c3de" 
+api_key = "" 
 
 # Weather Details Variable
 weather_details = tk.StringVar()
