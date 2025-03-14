@@ -1,0 +1,47 @@
+Introduction to pip:
+
+The presenter explains that pip is a package manager used to install, uninstall, and manage Python packages.
+Getting Help with pip:
+
+
+To view a list of all available commands and options:
+>pip help
+
+
+For help on a specific command, such as install:
+>pip help install
+
+
+Installing Packages:
+>pip install <package_name>
+
+
+Listing Installed Packages:
+>pip list
+
+
+Uninstalling Packages:
+>pip uninstall <package_name>
+
+
+
+Checking for Outdated Packages:
+>pip list --outdated
+
+
+Upgrading Packages:
+>pip install --upgrade <package_name>
+
+
+Freezing Installed Packages (Requirements File):
+To generate a list of all installed packages and their versions in a requirements format:
+>pip freeze
+
+
+To save the output to a requirements.txt file:
+>pip freeze > requirements.txt
+
+
+Installing from a Requirements File:
+To install all packages listed in a requirements.txt file:
+>pip install -r requirements.txt
