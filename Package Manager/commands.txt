@@ -3,6 +3,9 @@ Introduction to pip:
 The presenter explains that pip is a package manager used to install, uninstall, and manage Python packages.
 Getting Help with pip:
 
+To check pip version
+>pip --version
+
 
 To view a list of all available commands and options:
 >pip help
@@ -31,6 +34,11 @@ Checking for Outdated Packages:
 
 Upgrading Packages:
 >pip install --upgrade <package_name>
+>pip install -U <package_name>
+
+
+To check the version of a specific library
+>pip show <package_name>
 
 
 Freezing Installed Packages (Requirements File):
