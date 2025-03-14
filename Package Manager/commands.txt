@@ -50,6 +50,10 @@ To save the output to a requirements.txt file:
 >pip freeze > requirements.txt
 
 
+To check content inside requirements.txt
+>cat requirements.txt
+
+
 Installing from a Requirements File:
 To install all packages listed in a requirements.txt file:
 >pip install -r requirements.txt

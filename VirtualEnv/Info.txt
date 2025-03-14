@@ -1,0 +1,66 @@
+>mkdir Enviroments
+>cd Enviroments
+
+Create virtual environment
+>virtualenv project1_env
+
+
+Try if virtual environment is not activates
+Since VS Code uses PowerShell as the default terminal in Windows, you need to set the execution policy there.
+Run the following command in the terminal:
+>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+Activate virtual environment
+>.\project1_env\Scripts\activate
+
+
+Checked libraries in virtual environment : pip list
+-pip
+-setuptools
+-wheel
+
+
+Installed follwing libraries in virtual environment
+
+1. pytz Library
+What it does:
+The pytz library is used for working with time zones. 
+It provides accurate and up-to-date information about the world's time zones 
+and helps in converting dates and times between different time zones.
+
+
+2. psutil Library
+What it does:
+The psutil (Python System and Process Utilities) library is used for system monitoring and management.
+It can retrieve information on CPU usage, memory, disk usage, network activity, and processes running on the system.
+
+
+If we want to export all packages and version  numbers to use it in another project 
+>pip freeze --local > requriments.txt
+>cat requriments.txt
+
+
+If you want to get out of your python virtual environment
+>deactivate 
+
+
+To remove virtual environment
+
+On cmd linux/macos  or git bash on Windows
+>rm -rf project1_env/
+
+In PowerShell
+Remove-Item -Path "project1_env" -Recurse -Force
+
+
+Python interpreter that will be used in the virtual environment. 
+The virtual environment will be created using  specific version of Python (Python 3.10).
+"C:\Users\NIKITA PATIL\AppData\Local\Programs\Python\Python310\python.exe":  Path of python interpreter
+py310_env : Name of the virtual environment
+
+>virtualenv -p "C:\Users\NIKITA PATIL\AppData\Local\Programs\Python\Python310\python.exe" py310_env
+
+
+Virtual environments for youyr dependencies and packages and things like that for your project not for project files.
+Not necessary to have all project file into virtual environments
+They are intended to separate out packages , dependencies and the versions that you are going to use from project to project
