@@ -1,0 +1,31 @@
+1. Downloading and Installing Anaconda
+2. Creating a working environment in Anaconda
+3. Downloading and Installing Python
+4. Installing important Python packages such as Numpy, Pandas and Matplotlib
+5. Installing and opening Jupyter Notebook so we can run our first lines of code!
+https://www.youtube.com/watch?v=wmgyXK84TR0
+
+Creat conda environment
+>conda create -n myenv
+
+Ativate conda environment
+>conda activate myenv
+
+Deactivate conda environment
+>conda deactivate
+
+Delete conda environment 
+>conda env remove --name myenv
+>conda remove --name myenv --all
+
+Create conda virtualenv with specific python version 
+>conda create --name myenv python=3.10
+
+Install packages 
+>conda install -c anaconda numpy
+
+Install Jupyter notebook
+>conda install -c anaconda jupyter
+
+To view environments
+>conda env list
