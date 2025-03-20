@@ -1,11 +1,11 @@
-The application has the following features:
+##The application has the following features:
 
 1. Fetch weather by city: Users can input a city name to get weather updates.
 2. Fetch weather for current location: The application uses IP geolocation to determine the user's current   city and fetch weather updates for that city.
 3. Professional layout using HTML and CSS: A modern web interface with Bootstrap for responsiveness and aesthetics.
 
 
-WeatherApp
+##WeatherApp
 ├── app.py                # Your main Flask application
 ├── static/               # Your static files (CSS, JS, images)
 ├── templates/            # Your HTML templates
@@ -25,7 +25,7 @@ Run the following command to install it:
 >pyinstaller --onefile --add-data "templates;templates" WeatherApp.py
 
 
-Explanation:
+##Explanation:
 --onefile: Packages everything into a single .exe file.
 --add-data "templates;templates": Includes the templates folder in the executable.
 --add-data "static;static": Includes the static folder if you have any static assets like CSS or JavaScript files.
