@@ -7,6 +7,7 @@ https://www.youtube.com/watch?v=wmgyXK84TR0
 
 Creat conda environment
 >conda create -n myenv
+>conda create --name myenv flask pandas numpy  
 
 Ativate conda environment
 >conda activate myenv
@@ -29,3 +30,12 @@ Install Jupyter notebook
 
 To view environments
 >conda env list
+
+To save the dependencies to a environment.yml file:
+>conda env export > environment.yml
+
+To check content inside requirements.txt
+>cat environment.yml
+
+To Create a New Environment Using environment.yml
+>conda env create -f environment.yml --name my_new_env
