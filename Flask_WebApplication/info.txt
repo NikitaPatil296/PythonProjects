@@ -39,3 +39,8 @@ To check content inside requirements.txt
 
 To Create a New Environment Using environment.yml
 >conda env create -f environment.yml --name my_new_env
+
+
+
+----------------------------------------------------------------------------------------------
+

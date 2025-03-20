@@ -77,4 +77,4 @@ def weather_by_city():
     return jsonify(formatted_weather)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0') # 0.0.0.0 allows external access
