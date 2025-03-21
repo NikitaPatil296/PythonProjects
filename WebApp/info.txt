@@ -1,0 +1,12 @@
+This Python script is a basic web application created using the Flask framework.
+
+1. Flask is a micro web framework for Python that helps developers build web applications.
+    - Creating routes
+    - Serving web pages
+
+
+from flask import Flask     : Import the necessary framework.
+app = Flask(__name__)       : Create a web application instance.
+@app.route("/")             : Define a URL route (/) for the application.
+def hello():                : Define the logic for the route (what to display).
+if __name__ == '__main__':  : Run the application if the script is executed directly.
