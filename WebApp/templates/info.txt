@@ -1,0 +1,7 @@
+Built-in Emmet in VS Code
+VS Code comes with Emmet, a powerful tool for writing HTML and CSS quickly.
+
+Steps to Generate Basic HTML Code:
+Open .html file in VS Code.
+Type ! (exclamation mark) and press Tab or Enter.
+VS Code will automatically expand it into the basic HTML boilerplate.
