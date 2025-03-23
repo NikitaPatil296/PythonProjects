@@ -1,5 +1,11 @@
 {% extends "layout.html" %}
 {% block content %}
+    <h1>Welcome to My Webpage</h1>
+    <p>This is a simple HTML  page.</p>
+    <ul>
+        <li>HTML is easy to learn.</li>
+        <li>It is used to structure web content.</li>
+    </ul>
     <h2>Posts</h3>
     {% for post in posts %}
         <h3>{{post.title}}</h3>
