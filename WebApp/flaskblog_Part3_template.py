@@ -13,7 +13,19 @@ posts = [
         'title': 'Blog Post 2',
         'content': 'Second post content',
         'date_posted': 'April 21, 2025'
-    }
+    },
+    {
+        'author': 'Marco Pozol',
+        'title': 'The importance of the AI for big companies',
+        'content': 'During the last years, the advancements in technology helped us to discover...',
+        'date_posted': 'March 23, 2025'
+    },
+    {
+        'author': 'John Parker',
+        'title': 'How to revenue our ID for first time?',
+        'content': 'Read this post if you wanna discover how to deal with this very stressfull situation...',
+        'date_posted': 'January 17 , 2025'
+    },
 ]
 
 @app.route("/")

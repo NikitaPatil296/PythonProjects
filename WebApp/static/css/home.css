@@ -1,0 +1,33 @@
+.posts-container{
+    text-align: center;
+    background-color: bisque;
+}
+.posts-container section{
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.post-card {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+    background-color: cadetblue;
+    border-radius: 10px;
+    margin-block: 10px;
+    padding-block: 10px;
+    cursor: pointer;
+}
+.post-card h3{
+    color: white;
+    font-size: 1.8em;
+}
+.post-card p{
+    font-size: 1.4em;
+    font-family: monospace;
+}
+.post-card:hover{
+    transform: scale(1.02);
+    background-color: cornflowerblue;
+}
