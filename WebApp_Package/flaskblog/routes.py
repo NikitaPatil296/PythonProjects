@@ -1,20 +1,21 @@
 from flask import render_template, url_for, flash, redirect
-from flaskblog.forms import RegistrationForm, LoginForm
 from flaskblog import app
+from flaskblog.forms import RegistrationForm, LoginForm
 from flaskblog.models import User, Post
+
 
 posts = [
     {
-        'author': 'Nikita Patil',
+        'author': 'Corey Schafer',
         'title': 'Blog Post 1',
         'content': 'First post content',
-        'date_posted': 'April 20, 2025'
+        'date_posted': 'April 20, 2018'
     },
     {
-        'author': 'Rohan More',
+        'author': 'Jane Doe',
         'title': 'Blog Post 2',
         'content': 'Second post content',
-        'date_posted': 'April 21, 2025'
+        'date_posted': 'April 21, 2018'
     }
 ]
 
@@ -49,4 +50,3 @@ def login():
         else:
             flash('Login Unsuccessful. Please check username and password', 'danger')
     return render_template('login.html', title='Login', form=form)
-
