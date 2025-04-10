@@ -1,8 +1,8 @@
-from flask import Blueprints
+from flask import Blueprint
 from flask import render_template, request
 from flaskblog.models import Post
 
-main = Blueprints('main', __name__)
+main = Blueprint('main', __name__)
 
 @main.route("/")
 @main.route("/home")
