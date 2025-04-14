@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -30,6 +30,14 @@ def home():
         db.session.commit()
     allTodos = Todo.query.all()
     return render_template('index.html',allTodos=allTodos)
+
+
+@app.route('/delete/<int:sno>')
+def delete(sno):
+    todos= Todo.query.filter_by(sno=sno).first()
+    db.session.delete(todos)
+    db.session.commit()
+    return redirect("/")
 
 @app.route("/about")
 def about():
