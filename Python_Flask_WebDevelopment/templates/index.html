@@ -14,7 +14,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand font-weight-bold" href="#">MyTodo</a>
+            <a class="navbar-brand font-weight-bold" href="/">MyTodo</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -49,7 +49,7 @@
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search for tasks"
                         aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
         </div>
@@ -57,51 +57,51 @@
 
     <div class="container my-5">
         <h2>Add a Todo</h2>
-        <form>
+        <form action="/" method="POST">
             <div class="mb-3">
                 <label for="title" class="form-label">Todo Title</label>
-                <input type="text" class="form-control" id="title" aria-describedby="emailHelp">
+                <input type="text" class="form-control" name="title" id="title" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-                <label for="desc" class="form-label">Todo Description</label>
-                <input type="text" class="form-control" id="desc">
+                <label for="content" class="form-label">Todo Description</label>
+                <input type="text" class="form-control" name="content" id="content">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-dark">Add</button>
         </form>
     </div>
 
     <div class="container my-5">
         <h2>Your Todos</h2>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">S.No.</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>@social</td>
-                </tr>
-            </tbody>
-        </table>
+            {% if allTodos|length==0 %}
+            <div class="alert alert-dark" role="alert">
+               No Todos found. Add your first todo now!
+              </div>
+            {% else %}
+            <table class="table">
+                <tbody>
+                    <thead>
+                        <tr>
+                            <th scope="col">S.No.</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">content</th>
+                            <th scope="col">date_created</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    {% for todo in allTodos %}
+                    <tr>
+                        <th scope="row">{{loop.index}}</th>
+                        <td>{{todo.title}}</td>
+                        <td>{{todo.content}}</td>
+                        <td>{{todo.date_created}}</td>
+                        <td><a href="/update/{{todo.sno}}" type="button" class="btn btn-outline-dark btn-sm">Update</button></td>
+                        <td><a href="/delete/{{todo.sno}}" type="button" class="btn btn-outline-dark btn-sm">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+                    {% endfor %}
+                    {% endif %}
+             
     </div>
 
     <!-- Optional JavaScript -->
