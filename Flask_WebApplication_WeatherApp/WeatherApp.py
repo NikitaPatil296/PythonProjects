@@ -1,10 +1,11 @@
 from flask import Flask, render_template, request, jsonify
 import requests
+import os
 
 app = Flask(__name__)
 
 # Your OpenWeatherMap API Key
-API_KEY = ""
+API_KEY = os.environ.get('API_KEY')
 
 # Function to get the user's current location using IP geolocation
 def get_current_location():
